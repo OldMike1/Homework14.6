@@ -10,6 +10,12 @@ namespace Homework14._6
     {
         static void Main(string[] args)
         {
+            Temperature temperature = new Temperature();
+            temperature.Degree = int.Parse(Console.ReadLine());
+            Console.Clear();
+            Console.WriteLine(temperature.Degree + " gradus");
+            Console.WriteLine(temperature.Kelvin + " kelvins");
+
         }
     }
 }
