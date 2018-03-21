@@ -8,26 +8,35 @@ namespace Homework14._6
 {
     class Temperature
     {
-        protected int _degree;
+        protected int _cesium;
         protected int _kelvin;
 
-        public int Degree
+        public string Сesium
         {
             set
             {
-                _degree = value;
+                _cesium = int.Parse(value);
             }
             get
             {
-                return _degree;
+                if (_cesium < -273)
+                    return "Temperature can't be less than -273 degrees Celsius";
+                else
+                    return Convert.ToString(_cesium);
             }
         }
 
-        public int Kelvin
+        public string Kelvin
         {
             get
             {
-                return _kelvin = _degree + 273;
+                if (_cesium < -273)
+                    return "Temperature can't be less than 0 degrees Kelvin";
+                else
+                {
+                    _kelvin = _cesium + 273;
+                    return Convert.ToString(_kelvin);
+                }
             }
         }
     }
